@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
+    <title>ComicServer Bot</title>
     <link rel="shortcut icon" href="https://comicserver.org/img/Logos/ComicServer/cslogo.png" />
     <link id="stylesheet" rel="stylesheet" type="text/css" href="https://comicserver.org/css/dark.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -13,7 +13,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="https://app.comicserver.org">ComicServer Comic Viewer</a>
+      <a class="navbar-brand" href="https://app.comicserver.org">ComicServer Bot</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,10 +32,6 @@ Theme:
     function setStyleSheet(url){
        var stylesheet = document.getElementById("stylesheet");
        stylesheet.setAttribute('href', url);
-       if(url === "") {
-       const dpCssSheet = document.getElementById("dp-css");
-       dpCssSheet.remove();
-       }
     }
     </script>
   </nav>
@@ -55,14 +51,12 @@ display: none;
 }
 </style>
 <img id="logo" center width="400px">
-<h3>ComicServer is the best comic strip Discord bot.</h3>
-<p>**NOT CURRENTLY BEING MAINTAINED**</p>
+<h2 style="text-align:center">ComicServer Discord Bot</h3>
 <div style="text-align:center;">
 <strong><a class="btn btn-success" href="./invite">Invite</a></strong>
 <strong><a class="btn btn-success" href="./dash">Dashboard</a></strong>
 <br>
 </div><br>
-<code>
 <h1>Important</h1>
 <p>This bot is for comic STRIPS only. Full list of comics is <a href="https://gocomics.com/comics/a-to-z">here.</a> We also wanted to point out, when typing a comic name, type it as one word and with <b>no</b> special characters like & and $. An example is <b>calvinandhobbes</b>, one word and no special characters.</p>
 <h1>Definitions</h1>
@@ -83,6 +77,5 @@ display: none;
 <p><b>date [codename]</b> - Selected date from comic (yyyy m d).</p>
 <p><b>random [codename]</b> - Random comic for your choice!</p>
 <p><b>ago [codename] [years ago]</b> - Get a comic strip from a selected amount of years ago!</p>
-</code>
 </body>
 </html>
