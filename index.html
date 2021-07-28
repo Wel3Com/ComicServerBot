@@ -1,43 +1,69 @@
-<html>
+<html lang="en">
 <head>
-<title>ComicServer Bot</title>
-<link rel="shortcut icon" href="https://comicserver.org/img/Logos/ComicServer/cslogo.png">
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link href="./css/style.css" rel="stylesheet">
-<style type="text/css">
-p {
-font-family: "Comic Neue"
-}
-h1 {
-font-family: "Comic Neue"
-}
-h2 {
-font-family: "Comic Neue"
-}
-h3 {
-font-family: "Comic Neue"
-}
-code {
-background-color: #eee;
-border: 1px solid #999;
-display: block;
-padding: 20px;
-font-size:20px;
-color: #000;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="https://comicserver.org/img/Logos/ComicServer/cslogo.png" />
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="https://comicserver.org/css/dark.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://app.comicserver.org">ComicServer Comic Viewer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    </div>
+Theme:
+<select class="btn btn-success" onChange="setStyleSheet(value)"> 
+<option disabled>Choose</option>
+<option value = "https://comicserver.org/css/light.css">Light</option>
+<option selected="selected" value = "https://comicserver.org/css/dark.css">Dark</option>
+<option value = "https://comicserver.org/css/material.css">Material</option>
+<option value = "">Raw</option>
+</select>
+    <script>
+    function setStyleSheet(url){
+       var stylesheet = document.getElementById("stylesheet");
+       stylesheet.setAttribute('href', url);
+       if(url === "") {
+       const dpCssSheet = document.getElementById("dp-css");
+       dpCssSheet.remove();
+       }
+    }
+    </script>
+  </nav>
+  <style>
+.hidden {
+display: none;
 }
 </style>
 </head>
 <body>
-<img src="https://comicserver.org/img/Logos/ComicServer/darkhoriz.png" width="400px">
+<style>
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+</style>
+<img id="logo" center width="400px">
 <h3>ComicServer is the best comic strip Discord bot.</h3>
 <p>**NOT CURRENTLY BEING MAINTAINED**</p>
 <div style="text-align:center;">
-<strong><a class="btn btn-success" href="./invite">Invite ComicServer!</a></strong>
+<strong><a class="btn btn-success" href="./invite">Invite</a></strong>
 <strong><a class="btn btn-success" href="./dash">Dashboard</a></strong>
 <br>
 </div><br>
 <code>
-<h1>⚠️ Important ⚠️</h1>
+<h1>Important</h1>
 <p>This bot is for comic STRIPS only. Full list of comics is <a href="https://gocomics.com/comics/a-to-z">here.</a> We also wanted to point out, when typing a comic name, type it as one word and with <b>no</b> special characters like & and $. An example is <b>calvinandhobbes</b>, one word and no special characters.</p>
 <h1>Definitions</h1>
 <p><b>codename - This is just the comic name. This needs to be one word.
